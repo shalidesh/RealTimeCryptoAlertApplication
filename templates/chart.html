@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/chart.css') }}"> -->
+    
+{% endblock %}
+
+{% block body %}
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+
+            <div id="tradingview_7be05"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTCUSDT chart</span></a> by TradingView</div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget(
+            {
+                "autosize": true,
+                "symbol": "BINANCE:BTCUSDT",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#f1f3f6",
+                "withdateranges": true,
+                "range": "YTD",
+                "hide_side_toolbar": false,
+                "allow_symbol_change": true,
+                "details": true,
+                "hotlist": true,
+                "calendar": true,
+                "show_popup_button": true,
+                "popup_width": "1000",
+                "popup_height": "650",
+                "container_id": "tradingview_7be05"
+            }
+            );
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+
+
+    
+{% endblock %}
+    

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptex - Buy & Sell Digital Assets In The cryptex</title>
+
+    {% block head %}
+        
+    {% endblock %}
+
+ 
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.svg') }}" width="32" height="32" alt="Cryptex logo">
+        Cryptex
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="/" class="navbar-link active" data-nav-link>Homepage</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="{{ url_for('news') }}" class="navbar-link" data-nav-link>Crypto News</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="{{ url_for('markets') }}" class="navbar-link" data-nav-link>Charts</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="{{ url_for('notification') }}" class="navbar-link" data-nav-link>Notifications</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+      <a href="#" class="btn btn-outline">Sign in</a>
+      <a href="#" class="btn btn-outline">Sign Out</a>
+
+    </div>
+  </header>
+
+  {% block body %}
+
+  {% endblock %}
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top" data-section>
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" width="50" height="50" alt="Cryptex logo">
+            Cryptex
+          </a>
+
+          <h2 class="footer-title">Let's talk! 🤙</h2>
+
+          <a href="tel:+123456789101" class="footer-contact-link">+94 752 999 499</a>
+
+          <a href="mailto:hello.cryptex@gmail.com" class="footer-contact-link">cryptex@gmail.com</a>
+
+          <address class="footer-contact-link">
+            No 11/c Imbuldeniya Handessa
+          </address>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Products</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Spot</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Inverse Perpetual</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">USDT Perpetual</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Exchange</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Launchpad</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Binance Pay</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Buy Crypto</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Markets</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tranding Fee</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Affiliate Program</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Referral Program</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">API</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Bybit Learn</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help Center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">User Feedback</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Submit a request</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">API Documentation</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Trading Rules</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">About Us</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Bybit</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Authenticity Check</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Careers</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Business Contacts</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 ShaliDesh All Rights Reserved by <a href="#" class="copyright-link">codewithshali</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
