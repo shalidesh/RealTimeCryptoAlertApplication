@@ -1,0 +1,62 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+    
+{% endblock %}
+
+{% block body %}
+<div style="margin-top: 200px;">
+    <h1>Technical Scanner</h1>
+    <form>
+        <select name="pattern">
+            <option value="">-- Select a Pattern --</option>
+            {% for key in candlestick_patterns %}
+                <option value="{{ key }}" {% if pattern == key %}selected="selected"{% endif %}>{{ candlestick_patterns[key] }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Scan" />
+    </form>
+
+  
+
+    <table>
+        <tr>
+            <th>symbol</th>
+            <th>company</th>
+            <th>Date</th>
+            <th>signal</th>
+        </tr>
+        {% for stock in stocks %}
+            {% if stocks[stock][pattern] %}
+            <tr>
+                <td>
+                    {{ stock }}
+                </td>
+                <td>
+                    {{ stocks[stock]['company'] }}
+                </td>
+                <td>
+                    {{ stocks[stock]['date'] }}
+                </td>
+                <td class="{{ stocks[stock][pattern] }}">
+                    {{ stocks[stock][pattern]}}
+                </td>
+           
+            {% endif %}
+        {% endfor %}
+    </table>
+</div>
+    
+
+ {% endblock %}
+
+

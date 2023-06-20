@@ -1,0 +1,110 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "Bitcoin_price",
+      "patterns": [
+        "What is the present value of Bitcoin?",
+        "Can you provide me with the current price of Bitcoin?",
+        "What is the latest price of Bitcoin in the market?",
+        "How much does Bitcoin cost right now?",
+        "I would like to know the current market price of Bitcoin."
+      ],
+      "responses": [
+        "The current price of Bitcoin is $16000.",
+        "As of now, Bitcoin is valued at $16000.",
+        "Bitcoin's current price in the market is $16000.",
+       " At this moment, Bitcoin is priced at $16000.",
+        "The latest market rate for Bitcoin stands at $16000."
+      ]
+    },
+    {
+      "tag": "difference_of_Ethereum",
+      "patterns": [
+        "What is the price difference of Ethereum in the last 24 hours?",
+        "Has the price of Ethereum experienced any fluctuations over the past day?",
+        "Can you provide the price movement of Ethereum within the last 24 hours?",
+        "How has the value of Ethereum changed in the past 24 hours?",
+        "What is the percentage change in the price of Ethereum over the last 24 hours?"
+
+      ],
+      "responses": [
+        "Over the past 24 hours, the price of Ethereum has increased/decreased by X%.",
+      "In the last day, Ethereum's price has shown a positive/negative change of X%.",
+      "Within the past 24 hours, Ethereum's price has risen/fallen by X%.",
+      "Over the last day, there has been a X% change in the price of Ethereum.",
+      "In the past 24 hours, the price of Ethereum has experienced a X% increase/decrease."
+      ]
+    },
+    {
+      "tag": "volume_of_Litecoin",
+      "patterns": [
+        "What was the trading volume of Litecoin (LTC) in the previous hour?",
+        "Can you provide the trading volume of Litecoin (LTC) for the last hour?",
+        "How much trading activity has occurred for Litecoin (LTC) in the past hour?",
+        "What is the volume of Litecoin (LTC) traded in the hour that just passed?",
+        "I would like to know the trading volume of Litecoin (LTC) during the previous hour."
+      ],
+      "responses": [
+        "The trading volume of Litecoin (LTC) in the past hour was X.",
+        "In the previous hour, the trading volume of Litecoin (LTC) amounted to X.",
+        "Within the last hour, the trading volume of Litecoin (LTC) reached X.",
+        "The past hour witnessed a trading volume of X for Litecoin (LTC).",
+        "During the previous hour, Litecoin (LTC) recorded a trading volume of X."
+      ]
+    },
+
+    {
+      "tag": "popularon_social_media",
+      "patterns": [
+        "Can you provide a list of cryptocurrencies that are currently popular on social media platforms?",
+        "Which cryptocurrencies are currently gaining traction on social media?",
+        "Are there any cryptocurrencies that are currently trending on social media?",
+        "Can you tell me which cryptocurrencies are being widely discussed on social media platforms?",
+        "What are the most talked-about cryptocurrencies on social media right now?"
+      ],
+      "responses": [
+
+        "Currently, the cryptocurrencies that are trending on social media platforms include X, Y, and Z.",
+        "On social media platforms, cryptocurrencies such as X, Y, and Z are currently generating significant buzz.",
+        "The trending cryptocurrencies on social media right now are X, Y, and Z.",
+        "X, Y, and Z are the cryptocurrencies that are currently making waves on social media platforms.",
+        "Social media users are actively discussing and sharing information about cryptocurrencies like X, Y, and Z."
+
+      
+        ]
+      }
+      
+  
+  ]
+}

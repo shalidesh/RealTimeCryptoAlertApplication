@@ -20,46 +20,91 @@
     - #HEADER
   -->
 
+  {%if session["name"]%}
+
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="{{ url_for('static', filename='images/logo.svg') }}" width="32" height="32" alt="Cryptex logo">
-        Cryptex
-      </a>
+        <a href="#" class="logo">
+          <img src="{{ url_for('static', filename='images/logo.svg') }}" width="32" height="32" alt="Cryptex logo">
+          Cryptex
+        </a>
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <a href="/" class="navbar-link active" data-nav-link>Homepage</a>
+            </li>
+    
+            <li class="navbar-item">
+              <a href="{{ url_for('news') }}" class="navbar-link" data-nav-link>Crypto News</a>
+            </li>
 
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="{{ url_for('markets') }}" class="navbar-link" data-nav-link>Charts</a>
+            </li>
+            <li class="navbar-item">
+              <a href="{{ url_for('patterndetect')}}" class="navbar-link" data-nav-link>Pattern Detector</a>
+            </li>
 
-          <li class="navbar-item">
-            <a href="/" class="navbar-link active" data-nav-link>Homepage</a>
-          </li>
+            <li class="navbar-item">
+              <a href="{{ url_for('notification') }}" class="navbar-link" data-nav-link>Notifications</a>
+            </li>
+          </ul>
+        </nav>
 
-          <li class="navbar-item">
-            <a href="{{ url_for('news') }}" class="navbar-link" data-nav-link>Crypto News</a>
-          </li>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
 
-          <li class="navbar-item">
-            <a href="{{ url_for('markets') }}" class="navbar-link" data-nav-link>Charts</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="{{ url_for('notification') }}" class="navbar-link" data-nav-link>Notifications</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-      </button>
-      <a href="#" class="btn btn-outline">Sign in</a>
-      <a href="#" class="btn btn-outline">Sign Out</a>
+        <a href="/logout" class="btn btn-outline">Logout</a>
 
     </div>
   </header>
+          
+      {% else %}
+
+      <header class="header" data-header>
+        <div class="container">
+    
+            <a href="#" class="logo">
+              <img src="{{ url_for('static', filename='images/logo.svg') }}" width="32" height="32" alt="Cryptex logo">
+              Cryptex
+            </a>
+            <nav class="navbar" data-navbar>
+              <ul class="navbar-list">
+      
+                <li class="navbar-item">
+                  <a href="/" class="navbar-link active" data-nav-link>Homepage</a>
+                </li>
+        
+                
+                <li class="navbar-item">
+                  <a href="#" class="navbar-link" data-nav-link>About</a>
+                </li>
+    
+                <li class="navbar-item">
+                  <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+    
+            <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </button>
+    
+            <a href="/login" class="btn btn-outline">Login</a>
+    
+        </div>
+      </header>
+
+
+      {%endif%}
+    
 
   {% block body %}
 
@@ -69,6 +114,8 @@
   <!-- 
     - #FOOTER
   -->
+
+
 
   <footer class="footer">
 
@@ -265,6 +312,14 @@
   <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  	<!-- Main JS (Do not remove) -->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>
 
